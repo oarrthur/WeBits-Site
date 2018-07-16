@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee|Patrick+Hand+SC|Press+Start+2P");
+html {
+	font-family: 'Patrick Hand SC', cursive;
+	font-size: 15px;
+	color: #333;
+	text-transform: uppercase;
+	height: 100%;
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+}
+
+html body {
+	margin: 0px;
+}
+
+html body h1 {
+	margin: 0px;
+}
+
+html body img {
+	max-width: 100%;
+	height: auto;
+}
+
+html body a {
+	color: #fd2323;
+	text-decoration: none;
+}
+
+.content-box {
+	background-repeat: no-repeat;
+	background-image: url("../img/bg-default.png");
+	background-size: cover;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.content-box .header {
+	text-align: center;
+	padding-top: 10vh;
+	padding-bottom: 5vh;
+}
+
+.menu .btn-dinamic {
+	outline: none;
+	z-index: 5;
+	margin: 0 auto 30px;
+	line-height: 20px;
+	border: none;
+	padding: 20px;
+	font-size: 12px;
+	box-sizing: border-box;
+	width: 273px;
+	background-repeat: no-repeat;
+	color: #fff;
+	font-family: 'Press Start 2P', cursive;
+	position: relative;
+}
+
+.menu .btn-dinamic:hover:before {
+	-webkit-animation: play 1s steps(16) infinite;
+	-moz-animation: play 1s steps(16) infinite;
+	-ms-animation: play 1s steps(16) infinite;
+	-o-animation: play 1s steps(16) infinite;
+	animation: play 1s steps(16) infinite;
+}
+
+.menu .btn-dinamic:active {
+	transform: translateY(10px) translateX(-2px);
+}
+
+.menu .btn-dinamic:active:after {
+	top: 5px;
+	left: 0;
+}
+
+.menu .btn-dinamic:before {
+	content: '';
+	height: 60px;
+	z-index: -1;
+	width: 273px;
+	top: 0px;
+	left: 0px;
+	display: block;
+	background-image: url("../img/btn-dinamic.png");
+	background-position: 0 0px;
+	position: absolute;
+}
+
+.menu .btn-dinamic:after {
+	content: '';
+	height: 60px;
+	z-index: -2;
+	width: 273px;
+	top: 15px;
+	left: -2px;
+	display: block;
+	background-image: url("../img/btn-dinamic.png");
+	background-position: 0 -60px;
+	position: absolute;
+}
+
+@keyframes play {
+	from {
+		background-position: 0 -120px;
+	}
+	to {
+		background-position: 0 -1080px;
+	}
+}
